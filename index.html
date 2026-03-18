@@ -249,7 +249,7 @@ body {
   <div class="h-right">
     <div class="level-big">1025</div>
     <div class="level-label">Growth Level</div>
-    <div class="level-sub">초4(600) ~ 고3(1400) 기준</div>
+    <div class="level-sub">초4(400) ~ 고3(1200) 기준</div>
   </div>
 </div>
 <!-- ══════════ 성장 신호등 ══════════ -->
@@ -294,61 +294,62 @@ body {
   <!-- Y축 학년 기준 안내 -->
   <div style="display:flex;gap:8px;margin-bottom:6px;font-size:11px;color:#6A7480;align-items:center;">
     <span style="font-weight:700;">Growth Level 기준:</span>
-    <span style="background:#EEF7FF;border-radius:4px;padding:2px 8px;">초4 = 600</span>
-    <span style="background:#EEF7FF;border-radius:4px;padding:2px 8px;">중2 평균 = 860</span>
-    <span style="background:#FFF7E6;border-radius:4px;padding:2px 8px;color:#B7770D;font-weight:700;">고1 진입 = 950</span>
+    <span style="background:#EEF7FF;border-radius:4px;padding:2px 8px;">초4 = 400</span>
+    <span style="background:#EEF7FF;border-radius:4px;padding:2px 8px;">중2 평균 = 850</span>
+    <span style="background:#FFF7E6;border-radius:4px;padding:2px 8px;color:#B7770D;font-weight:700;">고1 진입 = 1000</span>
     <span style="background:#FFF7E6;border-radius:4px;padding:2px 8px;color:#B7770D;font-weight:700;">고1 완성 = 1100</span>
-    <span style="background:#EEF0F4;border-radius:4px;padding:2px 8px;">고3 = 1400</span>
+    <span style="background:#EEF0F4;border-radius:4px;padding:2px 8px;">고3 = 1200</span>
   </div>
   <div class="svg-chart-wrap">
     <!--
-      Y축 좌표계: Level 700 = y205, Level 1300 = y55
-      공식: y = 205 - (Level - 700) × 0.25
-      ─ 고1 진입(950) = y142  ─ 고1 완성(1100) = y105
-      ─ 중2 평균(860) = y165  ─ 현재(1025) = y124 (고1 수준 구간 내부)
+      Y축 좌표계: Level 400 = y205, Level 1200 = y55
+      공식: y = 205 - (Level - 400) × 0.1875
+      ─ 고1 진입(1000) = y93   ─ 고1 완성(1100) = y74
+      ─ 중2 평균(850)  = y121  ─ 현재(1025)     = y88 (고1 수준 구간 내부)
     -->
     <svg viewBox="0 0 1160 300" style="width:100%;display:block;">
       <!-- ★ 좌측 Y축 학년 구분 레이블 영역 (x 0~58) -->
-      <rect x="0" y="0"   width="58" height="300" fill="#FAFBFC"/>
+      <rect x="0" y="0" width="58" height="300" fill="#FAFBFC"/>
       <line x1="58" y1="0" x2="58" y2="260" stroke="#E0E4EA" stroke-width="1"/>
       <!-- Y축: 학년 구간 색상 -->
-      <!-- 초등 (Level 600~740, y230~195) -->
-      <rect x="0" y="195" width="58" height="35" fill="#EEF7FF" opacity="0.9"/>
-      <text x="29" y="215" font-size="9.5" fill="#4A7FBF" font-weight="700" text-anchor="middle">초등</text>
-      <!-- 중등 (Level 740~950, y195~142) -->
-      <rect x="0" y="142" width="58" height="53" fill="#E8F8EE" opacity="0.9"/>
-      <text x="29" y="171" font-size="9.5" fill="#1E8449" font-weight="700" text-anchor="middle">중등</text>
-      <!-- 고등 (Level 950~1300, y142~55) -->
-      <rect x="0" y="55"  width="58" height="87" fill="#FFF7E6" opacity="0.9"/>
-      <text x="29" y="100" font-size="9.5" fill="#B7770D" font-weight="700" text-anchor="middle">고등</text>
+      <!-- 초등 (Level 400~700, y205~149) -->
+      <rect x="0" y="149" width="58" height="56" fill="#EEF7FF" opacity="0.9"/>
+      <text x="29" y="181" font-size="9.5" fill="#4A7FBF" font-weight="700" text-anchor="middle">초등</text>
+      <!-- 중등 (Level 700~1000, y149~93) -->
+      <rect x="0" y="93" width="58" height="56" fill="#E8F8EE" opacity="0.9"/>
+      <text x="29" y="125" font-size="9.5" fill="#1E8449" font-weight="700" text-anchor="middle">중등</text>
+      <!-- 고등 (Level 1000~1200, y93~55) -->
+      <rect x="0" y="55" width="58" height="38" fill="#FFF7E6" opacity="0.9"/>
+      <text x="29" y="78" font-size="9.5" fill="#B7770D" font-weight="700" text-anchor="middle">고등</text>
       <!-- Y축 Level 숫자 (x60~) -->
-      <text x="62" y="209" font-size="10" fill="#B0B8C4">700</text>
-      <text x="62" y="159" font-size="10" fill="#B0B8C4">900</text>
-      <text x="62" y="109" font-size="10" fill="#B0B8C4">1100</text>
-      <text x="62" y="59"  font-size="10" fill="#B0B8C4">1300</text>
+      <text x="62" y="209" font-size="10" fill="#B0B8C4">400</text>
+      <text x="62" y="172" font-size="10" fill="#B0B8C4">600</text>
+      <text x="62" y="134" font-size="10" fill="#B0B8C4">800</text>
+      <text x="62" y="97"  font-size="10" fill="#B0B8C4">1000</text>
+      <text x="62" y="59"  font-size="10" fill="#B0B8C4">1200</text>
       <!-- ─── 배경 구역 (차트 본체 x=80~) ─── -->
       <rect x="80"  y="0" width="330" height="260" fill="#F5F9FF" opacity="0.5"/>  <!-- 초등 -->
       <rect x="410" y="0" width="244" height="260" fill="#F0FBF4" opacity="0.5"/>  <!-- 중등 -->
       <rect x="654" y="0" width="244" height="260" fill="#FFFBF0" opacity="0.5"/>  <!-- 고1-2 -->
       <rect x="898" y="0" width="242" height="260" fill="#FFF5F5" opacity="0.4"/>  <!-- 고3 -->
-      <!-- ★ 고1 수준 구간 강조 배경 (y105~y142) -->
-      <rect x="80" y="105" width="1060" height="37" fill="#FFE082" opacity="0.35"/>
-      <!-- 고1 표준 성취도 기준선 (Level 950 = y142) — 굵은 실선으로 강조 -->
-      <line x1="80" y1="142" x2="1140" y2="142" stroke="#E67E22" stroke-width="2.5" opacity="0.95"/>
-      <line x1="80" y1="105" x2="1140" y2="105" stroke="#F39C12" stroke-width="1.2" stroke-dasharray="5 3" opacity="0.5"/>
-      <!-- 고1 표준 성취도 기준선 레이블 (band 하단에 바로 붙임) -->
-      <rect x="700" y="144" width="178" height="17" rx="4" fill="#E67E22"/>
-      <text x="789" y="156" font-size="9.5" fill="#fff" font-weight="800" text-anchor="middle">▶ 고1 표준 성취도 기준선 (L.950)</text>
+      <!-- ★ 고1 수준 구간 강조 배경 (y74~y93, Level 1000~1100) -->
+      <rect x="80" y="74" width="1060" height="19" fill="#FFE082" opacity="0.35"/>
+      <!-- 고1 표준 성취도 기준선 (Level 1000 = y93) -->
+      <line x1="80" y1="93" x2="1140" y2="93" stroke="#E67E22" stroke-width="2.5" opacity="0.95"/>
+      <line x1="80" y1="74" x2="1140" y2="74" stroke="#F39C12" stroke-width="1.2" stroke-dasharray="5 3" opacity="0.5"/>
+      <!-- 고1 표준 성취도 기준선 레이블 -->
+      <rect x="700" y="95" width="182" height="17" rx="4" fill="#E67E22"/>
+      <text x="791" y="107" font-size="9.5" fill="#fff" font-weight="800" text-anchor="middle">▶ 고1 표준 성취도 기준선 (L.1000)</text>
       <!-- 고1 구간 레이블 (band 상단 우측) -->
-      <rect x="1063" y="107" width="75" height="16" rx="3" fill="#F39C12" opacity="0.9"/>
-      <text x="1100" y="119" font-size="9" fill="#fff" font-weight="700" text-anchor="middle">고1 수준 구간</text>
-      <!-- ★ 중2 평균 참조선 (Level 860, y=165) -->
-      <line x1="80" y1="165" x2="565" y2="165" stroke="#9B59B6" stroke-width="1.5" stroke-dasharray="6 3" opacity="0.65"/>
-      <rect x="80" y="155" width="115" height="15" rx="3" fill="rgba(155,89,182,0.12)"/>
-      <text x="137" y="165.5" font-size="9" fill="#8E44AD" font-weight="700" text-anchor="middle">중2 평균 (860)</text>
-      <!-- 현재 위치가 평균보다 얼마나 높은지 화살표 (860→1025, y165→y120) -->
-      <line x1="549" y1="163" x2="549" y2="126" stroke="#27AE60" stroke-width="2.5" marker-end="url(#upArrow)" opacity="0.9"/>
-      <text x="557" y="152" font-size="9" fill="#1E8449" font-weight="700">+165</text>
+      <rect x="1063" y="76" width="75" height="16" rx="3" fill="#F39C12" opacity="0.9"/>
+      <text x="1100" y="88" font-size="9" fill="#fff" font-weight="700" text-anchor="middle">고1 수준 구간</text>
+      <!-- ★ 중2 평균 참조선 (Level 850, y=121) -->
+      <line x1="80" y1="121" x2="565" y2="121" stroke="#9B59B6" stroke-width="1.5" stroke-dasharray="6 3" opacity="0.65"/>
+      <rect x="80" y="111" width="115" height="15" rx="3" fill="rgba(155,89,182,0.12)"/>
+      <text x="137" y="121.5" font-size="9" fill="#8E44AD" font-weight="700" text-anchor="middle">중2 평균 (850)</text>
+      <!-- 현재 위치가 평균보다 얼마나 높은지 화살표 (850→1025, y121→y88) -->
+      <line x1="549" y1="119" x2="549" y2="92" stroke="#27AE60" stroke-width="2.5" marker-end="url(#upArrow)" opacity="0.9"/>
+      <text x="557" y="108" font-size="9" fill="#1E8449" font-weight="700">+175</text>
       <!-- 세로 구분선 -->
       <line x1="166" y1="0" x2="166" y2="255" stroke="#E0E4EA" stroke-width="1" stroke-dasharray="4 3"/>
       <line x1="288" y1="0" x2="288" y2="255" stroke="#E0E4EA" stroke-width="1" stroke-dasharray="4 3"/>
@@ -360,8 +361,9 @@ body {
       <line x1="1020" y1="0" x2="1020" y2="255" stroke="#E0E4EA" stroke-width="1" stroke-dasharray="4 3"/>
       <!-- 가로 기준선 -->
       <line x1="80" y1="205" x2="1140" y2="205" stroke="#E0E4EA" stroke-width="1" stroke-dasharray="3 3"/>
-      <line x1="80" y1="155" x2="1140" y2="155" stroke="#E0E4EA" stroke-width="1" stroke-dasharray="3 3"/>
-      <line x1="80" y1="105" x2="1140" y2="105" stroke="#E0E4EA" stroke-width="1" stroke-dasharray="3 3"/>
+      <line x1="80" y1="168" x2="1140" y2="168" stroke="#E0E4EA" stroke-width="1" stroke-dasharray="3 3"/>
+      <line x1="80" y1="130" x2="1140" y2="130" stroke="#E0E4EA" stroke-width="1" stroke-dasharray="3 3"/>
+      <line x1="80" y1="93"  x2="1140" y2="93"  stroke="#E0E4EA" stroke-width="1" stroke-dasharray="3 3"/>
       <line x1="80" y1="55"  x2="1140" y2="55"  stroke="#E0E4EA" stroke-width="1" stroke-dasharray="3 3"/>
       <!-- ─── 화살표 마커 정의 ─── -->
       <defs>
@@ -369,33 +371,33 @@ body {
           <path d="M0,6 L3,0 L6,6" fill="#27AE60"/>
         </marker>
       </defs>
-      <!-- 도전적 목표선 (Stretch Target) — 현재 위치(y=120)에서 시작 -->
-      <polyline points="593,120 654,110 776,85 898,60 1020,35 1142,10"
+      <!-- 도전적 목표선 (Stretch Target: 고2 진입 L.1100) -->
+      <polyline points="593,88 715,76 837,64 959,52 1081,40 1142,34"
         fill="none" stroke="#2A5F8F" stroke-width="2" stroke-dasharray="8 5" opacity="0.6"/>
-      <!-- 전형적 목표선 (Typical) — 현재 위치(y=120)에서 시작 -->
-      <polyline points="593,120 654,120 776,108 898,96 1020,84 1142,72"
+      <!-- 전형적 목표선 (Typical: 고1 50% L.1050) -->
+      <polyline points="593,88 715,83 837,79 959,75 1081,71 1142,68"
         fill="none" stroke="#A0A8B4" stroke-width="2" stroke-dasharray="6 4" opacity="0.5"/>
-      <!-- 실제 성장 곡선 -->
-      <polyline points="105,230 227,220 349,208 471,190 593,120"
+      <!-- 실제 성장 곡선 (초4 L.400 → 초5 L.490 → 초6 L.580 → 중1 L.720 → 중2 L.1025) -->
+      <polyline points="105,205 227,188 349,171 471,145 593,88"
         fill="none" stroke="#27AE60" stroke-width="3.5" stroke-linejoin="round"/>
       <!-- 미래 예측 (점선) -->
-      <polyline points="593,120 654,108"
+      <polyline points="593,88 654,82"
         fill="none" stroke="#27AE60" stroke-width="2" stroke-dasharray="6 4" opacity="0.5"/>
       <!-- 과거 데이터 포인트 -->
-      <circle cx="105" cy="230" r="5" fill="#27AE60" stroke="#fff" stroke-width="2"/>
-      <circle cx="227" cy="220" r="5" fill="#27AE60" stroke="#fff" stroke-width="2"/>
-      <circle cx="349" cy="208" r="5" fill="#27AE60" stroke="#fff" stroke-width="2"/>
-      <circle cx="471" cy="190" r="5" fill="#27AE60" stroke="#fff" stroke-width="2"/>
-      <!-- 현재 위치 (Level 1025 = y124, 고1 수준 구간 내부 ✓) -->
-      <circle cx="593" cy="120" r="13" fill="#fff" stroke="#1B3A5C" stroke-width="3.5"/>
-      <circle cx="593" cy="120" r="6"  fill="#1B3A5C"/>
-      <!-- 현재 위치 라벨 — 도트 위쪽(고1 구간 상단)에 배치 -->
-      <line x1="593" y1="107" x2="593" y2="66" stroke="#1B3A5C" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.55"/>
-      <rect x="606" y="20" width="164" height="46" rx="8" fill="#1B3A5C"/>
-      <text x="688" y="39" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Level 1025 📍</text>
-      <rect x="614" y="45" width="148" height="17" rx="4" fill="#27AE60"/>
-      <text x="688" y="57.5" font-size="10" font-weight="800" fill="#fff" text-anchor="middle">🎯 고1 수준 완전 돌파!</text>
-      <line x1="593" y1="133" x2="593" y2="260" stroke="#1B3A5C" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4"/>
+      <circle cx="105" cy="205" r="5" fill="#27AE60" stroke="#fff" stroke-width="2"/>
+      <circle cx="227" cy="188" r="5" fill="#27AE60" stroke="#fff" stroke-width="2"/>
+      <circle cx="349" cy="171" r="5" fill="#27AE60" stroke="#fff" stroke-width="2"/>
+      <circle cx="471" cy="145" r="5" fill="#27AE60" stroke="#fff" stroke-width="2"/>
+      <!-- 현재 위치 (Level 1025 = y88, 고1 수준 구간 내부 ✓) -->
+      <circle cx="593" cy="88" r="13" fill="#fff" stroke="#1B3A5C" stroke-width="3.5"/>
+      <circle cx="593" cy="88" r="6"  fill="#1B3A5C"/>
+      <!-- 현재 위치 라벨 -->
+      <line x1="593" y1="75" x2="593" y2="34" stroke="#1B3A5C" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.55"/>
+      <rect x="606" y="10" width="164" height="46" rx="8" fill="#1B3A5C"/>
+      <text x="688" y="29" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Level 1025 📍</text>
+      <rect x="614" y="35" width="148" height="17" rx="4" fill="#27AE60"/>
+      <text x="688" y="47.5" font-size="10" font-weight="800" fill="#fff" text-anchor="middle">🎯 고1 수준 완전 돌파!</text>
+      <line x1="593" y1="101" x2="593" y2="260" stroke="#1B3A5C" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4"/>
       <!-- X축 학년 라벨 -->
       <text x="105"  y="276" font-size="11" fill="#8A96A8" text-anchor="middle">초4</text>
       <text x="227"  y="276" font-size="11" fill="#8A96A8" text-anchor="middle">초5</text>
